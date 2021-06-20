@@ -2,9 +2,7 @@
 <html>
 
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Math Tidbits</title>
+    <title>Math Tidbits - Bijection</title>
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
 
@@ -29,9 +27,8 @@
           <li><a href="aboutme.html">About Me</a></li>
           <li class="has-submenu"><a href="theorem.html">Theorems</a>
             <ul class="sub-menu">
-              <li><a href="demoivre.html">De Moivre's Theorem</a></li>
+              <li><a href="demoivre.html">De Moivre's Theorem and Euler's Formula</a></li>
               <li><a href="bijection.html">Bijection: Stars and Bars</a></li>
-              <li><a href="ceva.html">Colinearity and Concurrency: Ceva's Theorem and Menelaus's Theorem</a></li>
               <li><a href="totient.html">Fermat's Little Theorem and Euler's Totient Function</a></li>
             </ul>
           </li>
@@ -41,10 +38,34 @@
     </header>
     <section class="page-content">
       <div class="center-div">
-        <h4> What Is Bijection? </h4>
+        <h4>What Is Bijection?</h4>
         <p>
-          
-        </p>  
+          Bijection is a method to count the number of elements in a set by counting the number of elements in a different set in which every single element corresponds to exactly one element in the first set, and every single element in the first set corresponds to exactly one element in the second set. Basically, we use this by finding a simpler set that has this one-to-one correspondence with the original set and count the number of elements in that set to find the number of elements in the original set.
+        </p>
+      <img src="images/Bijection.svg.png" class="img-center">  
+      </div>
+      <div class="center-div">
+        <h4>Stars and Bars</h4>
+        <p>
+          One extremely useful method of bijection is known as stars and bars. Suppose we are asked to find the number of ways to distribute \(n\) identical balls amongst \(k\) boxes. It doesn't take too much thinking to realize that casework will be extremely difficult and tedious if \(n\) and \(k\) are large. Instead, we use bijection. Rather than distributing the balls amongst the boxes, we can distribute dividers between the balls, with the spaces between dividers representing the number of balls within the boxes. The set of ways to distribute the dividers, bars, amongst the balls, stars, has a one-to-one correspondence with the original set of ways to distribute balls amongst boxes and is far easier to count. All we have to do is choose which of the \(n+k-1\) objects (stars and bars) are bars. That is, if we have no restrictions on the number of balls in each box. If each box must have at least one ball, each pair of bars must have at least one star between the bars. Therefore, we choose the bars (\(k-1\)) from the spaces between the stars (\(n-1\)).
+        </p>
+      </div>
+      <div class="center-div">
+        <h4>Stars and Bars Formulas</h4>
+        <table>
+          <tr>
+            <th>Restrictions</th>
+            <th>Formula</th>
+          </tr>
+          <tr>
+            <td>None</td>
+            <td>\(\binom{n+k-1}{k-1}\)</td>
+          </tr>
+          <tr>
+            <td>At least one ball in each box</td>
+            <td>\(\binom{n-1}{k-1}\)</td>
+          </tr>
+        </table>
       </div>
     </section>
   </body>

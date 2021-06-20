@@ -1,17 +1,16 @@
-@import url("<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">");
+/** 
+I borrowed a lot of the CSS from 
+**/
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Basic */
-
 a {
-	color: #3CF;
     text-decoration: none;
 }
 
 a:hover {
-	color: #FC3;
     text-decoration: none;
 }
 
@@ -24,6 +23,7 @@ ul {
 p {
     font-size: 13px;
     line-height: 22px;
+    text-align: center;
 }
 
 h4 {
@@ -32,12 +32,18 @@ h4 {
   line-height: 30px;
 }
 
-p2 {
-    font-size: 13px;
-    line-height: 22px;
+table {
+  width:100%;
 }
 
-/* Buttons */
+th, td, table{
+  border: 1px solid black;
+  text-align:center;
+}
+
+.center-text{
+  text-align:center;
+}
 
 .main-button a {
     background-color: #f5a425;
@@ -51,7 +57,9 @@ p2 {
     outline: none;
 }
 
-a.menu-link { display: none; }
+a.menu-link {
+    display: none; 
+}
 
 @media screen and (max-width: 950px) {
   a.menu-link {
@@ -119,19 +127,17 @@ a.menu-link { display: none; }
   }
 }
 
-/* Header */
-
 @media screen and (max-width: 1050px) {
   .main-header .logo {
-      padding-left: 30px!important;
+      padding-left: 30px;
   }
 
   .main-menu {
-      padding-right: 30px!important;
+      padding-right: 30px;
   }
 
   .main-menu li {
-      margin-left: 5px!important;
+      margin-left: 5px;
   }
 }
 
@@ -156,6 +162,7 @@ a.menu-link { display: none; }
     font-weight: 800;
     color: #fff;
 }
+
 .main-header .logo a em {
     font-style: normal;
     color: #f5a425;
@@ -257,8 +264,6 @@ a.menu-link { display: none; }
   }
 }
 
-
-/* Slider */
 .page-content {
   position: relative;
   max-height: 80%;
@@ -273,11 +278,16 @@ a.menu-link { display: none; }
  height: auto;
 }
 
+.img-center {
+  margin: 0 25% 0 25%;
+  width:50%;
+  height: auto;
+}
+
 .center-div {
     width: 50%;
     margin: 0 auto;
 }
-
 
 .main-banner {
   position: relative;
@@ -365,20 +375,14 @@ a.menu-link { display: none; }
 
 }
 
-
 .main-content p {
     font-size: 16px;
-   /* text-transform: uppercase; */
     font-weight: 500;
     color: #fff;
     letter-spacing: 2px;
     margin-bottom: 60px;
 }
-.main-content-black p {
-    font-size: 16px;
-   /* text-transform: uppercase; */
-    font-weight: 500;
-    color: #000;
-    letter-spacing: 2px;
-    margin-bottom: 0px;
+
+.p-left{
+  text-align: left;
 }
